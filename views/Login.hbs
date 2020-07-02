@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Log In</title>
+    </head>
+
+    <body>
+        <div id="hSection">
+            <img class="homeImage" src="image/homeImage.jpg" alt="homeImage">
+        </div>
+        <h2>Customer Login</h2>
+        
+        
+        <form method="POST" action="/Login">
+                <table style="border: 1px #9c9a9a;padding:5px;">
+                    <tbody>
+                        <tr>
+                            <td><label for="email">Email:</label></td>
+                            <td><input type="text" id="email" name="email"></td>
+                        </tr>
+                        <tr>
+                            {{#if eFlag}}
+                                <td><div>{{eError}}</div></td>
+                            {{/if}}
+                        </tr>
+                        <tr>
+                            <td><label for="password">Password:</label></td>
+                            <td><input type="text" id="password" name="password"></td>
+                        </tr>
+                        <tr>
+                            {{#if pFlag}}
+                                <td><div>{{pError}}</div></td>
+                            {{/if}}
+                        </tr>
+                        <tr>
+                            <td colspan="2"><button type="submit">SIGN IN</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+        </form>
+        
+    </body>
+</html>

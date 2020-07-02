@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Registration</title>
+    </head>
+
+    <body>
+        <div id="hSection">
+            <img class="homeImage" src="image/homeImage.jpg" alt="homeImage">
+        </div>
+        <h2>Create Account</h2>
+        
+        
+        <form method="POST" action="/Registration" syle="margin-bottom: 70px">
+          <table>
+            <tbody>   
+                <tr>
+                        <td><label for="firstname">First Name:</label></td>
+                        <td><input type="text" id="firstname" name="firstname"></td>
+                        {{#if fFlag}}
+                             <td><div>{{fError}}</div></td>
+                        {{/if}}
+                </tr>  
+                <tr>      
+                        <td><label for="lastname">Last Name:</label></td>
+                        <td><input type="text" id="lastname" name="lastname"></td>
+                        {{#if lFlag}}
+                             <td><div>{{lError}}</div></td>
+                        {{/if}}
+                </tr>
+                <tr>       
+                        <td><label for="email">Email:</label></td>
+                        <td><input type="text" id="email" name="email"></td>
+                        {{#if eFlag}}
+                             <td><div>{{eError}}</div></td>
+                        {{/if}}
+                </tr>   
+                <tr>      
+                        <td><label for="password">Password:</label></td>
+                        <td><input type="text" id="password" name="password"></td>
+                        {{#if pFlag}}
+                              <td><div>{{pError}}</div></td>
+                        {{/if}}
+                </tr>
+                <tr>       
+                        <td colspan="2"><button type="submit">SIGN UP</button></td>
+                </tr>        
+            </tbody>     
+          </table>
+         </form>
+        
+    </body>
+</html>

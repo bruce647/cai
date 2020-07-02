@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Top Meal Package For You</title>
+    </head>
+
+    <body>
+        <div id="hSection">
+            <img class="mealPack" src="image/mealPack.png" alt="mealPack">
+        </div>
+        <div id="mealpackage">
+            <h2>Our chefs are making them for you!</h2>
+            {{#each mealData}}
+                <div id="packlist">
+                    <img src={{path}} alt={{title}}>
+                    {{#if istopmeal}}
+                        <p>Top Meal Package</p>
+                    {{/if}}
+                    <p>{{title}}</p>
+                    <p>{{price}}</p>
+                    <p>{{desc}}</p>
+                </div>
+            {{/each}}
+        </div>
+    </body>
+</html>

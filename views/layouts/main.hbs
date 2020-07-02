@@ -1,0 +1,38 @@
+ <!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{{title}}</title>
+        <link rel='stylesheet' href='css/normalize.css' type='text/css' media='screen'>
+    </head>
+    
+    <body>
+       <header>
+            <div id="navLogo">
+                <img class="logo" src="image/logo.png" alt="Logo">
+                <h1>Fit Eats</h1>
+                <nav id="headermenu">
+                    <ul>
+                        {{#each navData}}
+                        <li><a href={{url}}>{{string}}</a></li>
+                        {{/each}}
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <main>
+            {{{body}}}
+        </main>
+        <footer>
+            <div id="footermenu">
+                <nav>
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="">©2020 - &lt;Yiqing Cai&gt;</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </footer>
+    </body>
+</html> 
